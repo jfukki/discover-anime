@@ -1,4 +1,4 @@
-<div class="container-fluid extra-padding-container my-footer">
+<div class="container-fluid extra-padding-container my-footer mt-5">
   <footer class="row row-cols-5 py-5  border-top">
     <div class="col">
       <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">

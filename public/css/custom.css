@@ -142,8 +142,10 @@ h2
 .anime-detail-below-cover-genere
 {
     margin-top:10px;
-
-
+    color: #404e5c;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: oxyRegular;
 }
 
 .anime-detail-anime-title-des-section
@@ -157,7 +159,23 @@ h2
 .anime-detail-anime-title
 {
     color: #4B5961 !important;
-    font-size: 28px;
+    font-size: 32px;
+    line-height: 46px;
+    font-family: oxyBold;
+}
+
+.anime-detail-anime-synopsis
+{
+    color: #4B5961 !important;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: oxyBold;
+}
+
+.anime-detail-anime-trailer
+{
+    color: #4B5961 !important;
+    font-size: 24px;
     line-height: 32px;
     font-family: oxyBold;
 }
@@ -181,4 +199,91 @@ h2
     opacity: 0.6;
     filter: blur('12%');
 
+}
+
+
+.anime-detail-page-source-text 
+{
+    color: #4B5961 !important;
+    font-family: oxyRegular;
+    text-decoration: none;
+}
+
+
+.anime-detail-page-source-text a
+{
+    color: #4B5961 !important;
+    font-family: oxyRegular;
+    text-decoration: none;
+}
+
+.anime-detail-news-card
+{
+    background: #FBFBFB;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border-radius: 4px;
+    display: inline-grid;
+    height: 265px;
+    min-width: 370px;
+    padding:20px;
+    margin-bottom: 4%;
+}
+
+.detail-news-image
+{
+    width: 140px;
+    height: 230px;
+}
+
+.detail-news-title
+{
+    color: #4B5961 !important;
+    font-family: oxyBold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+.detail-news-des
+{
+    color: #4B5961 !important;
+    font-family: oxyLight;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.deatil-news-date
+{
+    color: #4B5961 !important;
+    font-family: oxyBold;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+.anime-detail-info-grid
+{
+    background: #FBFBFB;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin:6px;    
+}
+
+.anime-detail-info-grid-title
+{
+    color: #4B5961 !important;
+    font-family: oxyBold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.anime-detail-info-grid-text
+{
+    color: #4B5961 !important;
+    font-family: oxyLight;
+    font-size: 14px;
+    text-decoration: none;
 }
