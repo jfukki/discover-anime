@@ -14,102 +14,24 @@
 
     <div class="row">   
 
-        <div class="col-md-3 anime-grid-list">
+    
+    @foreach($data as $d)
+        <div class="col-md-2 anime-grid-list">
 
-            <a href="{{ route('animeDetail') }}">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133844-E32FjKZ0XxEs.jpg"
+            <a href="{{ route('animeDetail' , $d['mal_id'])  }}">
+            <img src="{{$d['images']['jpg']['large_image_url']}}"
              alt="" class="anime-grid-list-image">
             </a>
-            <a href="{{ route('animeDetail') }}" class="text-decor">
-                <p class="anime-title-list-grid">OverLoad</p>
+            <a href="{{ route('animeDetail' , $d['mal_id']) }}" class="text-decor">
+                <p class="anime-title-list-grid">{{$d['titles'][0]['title']}}</p>
             </a>
             
         </div>
+ @endforeach
+      
  
-        <div class="col-md-3 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-            <a href="" class="text-decor">
-                <p class="anime-title-list-grid">One Piece</p>
-            </a>
-            
-            
-        </div>
+        
  
-        <div class="col-md-3 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114745-APZN90WhNMAD.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-            <a href="" class="text-decor">
-                <p class="anime-title-list-grid">Is It Wrong to Try to Pick Up Girls in a Dungeon? IV</p>
-            </a>
-
-        </div>
- 
-        <div class="col-md-3 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx136934-BXmmENtggiHr.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-             <a href="" class="text-decor">
-                <p class="anime-title-list-grid">One Piece</p>
-            </a>
-            
-        </div>
-
-        <div class="col-md-3 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97940-bPydLjny8PUw.png"
-             alt="" class="anime-grid-list-image">
-            </a>
-            <a href="" class="text-decor">
-                <p class="anime-title-list-grid">One Piece</p>
-            </a>
-            
-        </div>
-
-        <div class="col-md-3 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx143270-iZOJX2DMUFMC.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-            <a href="" class="text-decor">
-                <p class="anime-title-list-grid">One Piece</p>
-            </a>
-            
-        </div>
-
-        <div class="col-md-3 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1735-Az5gbEdWeotG.png"
-             alt="" class="anime-grid-list-image">
-            </a>
-            <a href="" class="text-decor">
-                <p class="anime-title-list-grid">One Piece</p>
-            </a>
-            
-        </div>
-
-        <div class="col-md-3 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx141391-Wued34kHqIov.png"
-             alt="" class="anime-grid-list-image">
-            </a>
-            <a href="" class="text-decor">
-                <p class="anime-title-list-grid">One Piece</p>
-            </a>
-            
-        </div>
 
     </div>
 </div>

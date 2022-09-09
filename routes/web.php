@@ -20,5 +20,5 @@ use App\Http\Controllers\HomeController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/detail', [HomeController::class, 'animeDetail'])->name('animeDetail');
+Route::get('/detail/{id}', [HomeController::class, 'animeDetail'])->name('animeDetail');
 
