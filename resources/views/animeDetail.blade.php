@@ -144,7 +144,9 @@
 
                     <div class="col-md-2 anime-detail-info-grid">
 
-                        <span class="anime-detail-info-grid-title">Theme: </span> <span class="anime-detail-info-grid-text">{{$data['themes'][0]['name']}}</span>
+                        <span class="anime-detail-info-grid-title">Theme: </span> <span class="anime-detail-info-grid-text">
+                            {{$data['themes'][0]['name']}}
+                        </span>
 
                     </div>
 
@@ -168,6 +170,68 @@
     </div>
  </div>
 
+
+ <div class="conatiner extra-padding-container">
+    <div class="row">
+                        <div class="col-md-12">
+                        <hr class="mt-5">
+                             <h2>Streaming Sites </h2>
+                            
+                        </div>
+
+
+                        @foreach($streamingsites as $streamingsites)
+
+                        <div class="col-md-2  anime-detail-info-grid">
+
+                             
+
+                            <a href="{{$streamingsites['url']}}" target="_blank" class="text-decor">
+                                <p class="anime-title-list-grid">{{$streamingsites['name']}}</p>
+                            </a>
+
+                        </div>
+
+                        @endforeach
+                       
+
+
+                   
+    </div>
+ </div>
+
+
+ <div class="conatiner extra-padding-container">
+    <div class="row">
+                        <div class="col-md-12">
+                        <hr class="mt-5">
+                             <h2>Video Episodes </h2>
+                            
+                        </div>
+
+
+                        @foreach($episodes as $episodes)
+
+                        <div class="col-md-3 anime-grid-list">
+
+                                <a href="{{$episodes['url']}}" target="_blank">
+                                <img src="{{$episodes['images']['jpg']['image_url']}}"
+                                alt=""  class="anime-grid-list-image">
+                                </a>
+
+                                <a href="" class="text-decor">
+                                    <p class="anime-title-list-grid">{{$episodes['episode']}}: {{$episodes['title']}}</p>
+                                </a>
+
+                        </div>
+
+                        @endforeach
+                       
+
+
+                   
+    </div>
+ </div>
 
 
  <div class="conatiner extra-padding-container">
@@ -211,7 +275,7 @@
                             
                         </div>
                         @foreach($staff as $staff)
-                        <div class="col-md-2 anime-grid-list">
+                        <div class="col-md-1 anime-grid-list">
 
                             <a href="">
                             <img src="{{$staff['person']['images']['jpg']['image_url']}}"
@@ -241,7 +305,7 @@
                         </div>
 
                         @foreach($pictures as $pictures)
-                        <div class="col-md-2 anime-grid-list">
+                        <div class="col-md-3 anime-grid-list">
 
                             <a href="">
                             <img src="{{$pictures['jpg']['large_image_url']}}"
@@ -266,10 +330,10 @@
                             
                         </div>
                         @foreach($recommendations as $recommendations)
-                        <div class="col-md-2 anime-grid-list">
+                        <div class="col-md-3 anime-grid-list">
 
                             <a href="{{ route('animeDetail' , $recommendations['entry']['mal_id'])  }}">
-                            <img src="{{$recommendations['entry']['images']['jpg']['image_url']}}"
+                            <img src="{{$recommendations['entry']['images']['jpg']['large_image_url']}}"
                             alt="" class="anime-grid-list-image">
                             </a>
 

@@ -15,7 +15,7 @@
         <hr>
     </div>
 
-    @include('components.popular')
+    <!-- @include('components.popular')
 
 
     <div class="container mt-5" >
@@ -26,7 +26,7 @@
 
     <div class="container mt-5" >
         <br>
-    </div>
+    </div> -->
 
 
 @endsection

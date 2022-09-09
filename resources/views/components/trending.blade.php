@@ -16,7 +16,7 @@
 
     
     @foreach($data as $d)
-        <div class="col-md-2 anime-grid-list">
+        <div class="col-md-3 anime-grid-list">
 
             <a href="{{ route('animeDetail' , $d['mal_id'])  }}">
             <img src="{{$d['images']['jpg']['large_image_url']}}"
