@@ -13,7 +13,7 @@ class HomeController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://api.jikan.moe/v4/top/anime/?limit=12',
+        CURLOPT_URL => 'https://api.jikan.moe/v4/top/anime/?limit=12&filter=bypopularity',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
@@ -34,7 +34,30 @@ class HomeController extends Controller
 // 
 
 
-        return view('home')->with('data', $data);
+
+
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.jikan.moe/v4/seasons/upcoming/?limit=12',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'GET',
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        $upcomingSeason = json_decode($response, true);
+          
+        $upcomingSeason =  $upcomingSeason['data'];
+
+        return view('home')->with('data', $data)->with('upcomingSeason',$upcomingSeason);
     }
 
 

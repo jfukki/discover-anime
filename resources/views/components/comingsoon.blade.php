@@ -18,142 +18,23 @@
 
         <div class="row">   
 
-        <div class="col-md-2 anime-grid-list">
+        @foreach($upcomingSeason as $upcomingSeason)
 
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx127230-FlochcFsyoF4.png"
+        <div class="col-md-3 anime-grid-list">
+
+            <a href="{{ route('animeDetail' , $upcomingSeason['mal_id'])  }}">
+            <img src="{{$upcomingSeason['images']['jpg']['large_image_url']}}"
              alt="" class="anime-grid-list-image">
             </a>
 
             <a href="" class="text-decor">
-                <p class="anime-title-list-grid">Chainsaw Man</p>
+                <p class="anime-title-list-grid">{{$upcomingSeason['titles'][0]['title']}}</p>
             </a>
             
         </div>
- 
-        <div class="col-md-2 anime-grid-list">
 
-            <a href="" >
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx142838-ECZSqfknAqAT.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-
-            <a href="" class="text-decor">
-                <p class="anime-title-list-grid">SPY x FAMILY Cour 2</p>
-            </a>
-        </div>
- 
-        <div class="col-md-2 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx140439-qpBzXkvVqSx3.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-              <a href="" class="text-decor">
-                <p class="anime-title-list-grid">Mob Psycho 100 III</p>
-            </a>
-        </div>
+        @endforeach
+  
    
-       
-        <div class="col-md-2 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139630-oc4l8OtJ4tRQ.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-              <a href="" class="text-decor">
-                <p class="anime-title-list-grid">My Hero Academia Season 6</p>
-            </a>
-        </div>
- 
-        <div class="col-md-2 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139630-oc4l8OtJ4tRQ.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-              <a href="" class="text-decor">
-                <p class="anime-title-list-grid">My Hero Academia Season 6</p>
-            </a>
-        </div>
- 
-        <div class="col-md-2 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139630-oc4l8OtJ4tRQ.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-              <a href="" class="text-decor">
-                <p class="anime-title-list-grid">My Hero Academia Season 6</p>
-            </a>
-        </div>
- 
-        <div class="col-md-2 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139630-oc4l8OtJ4tRQ.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-              <a href="" class="text-decor">
-                <p class="anime-title-list-grid">My Hero Academia Season 6</p>
-            </a>
-        </div>
- 
-        <div class="col-md-2 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139630-oc4l8OtJ4tRQ.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-              <a href="" class="text-decor">
-                <p class="anime-title-list-grid">My Hero Academia Season 6</p>
-            </a>
-        </div>
- 
-        <div class="col-md-2 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139630-oc4l8OtJ4tRQ.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-              <a href="" class="text-decor">
-                <p class="anime-title-list-grid">My Hero Academia Season 6</p>
-            </a>
-        </div>
- 
-        <div class="col-md-2 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139630-oc4l8OtJ4tRQ.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-              <a href="" class="text-decor">
-                <p class="anime-title-list-grid">My Hero Academia Season 6</p>
-            </a>
-        </div>
- 
-        <div class="col-md-2 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139630-oc4l8OtJ4tRQ.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-              <a href="" class="text-decor">
-                <p class="anime-title-list-grid">My Hero Academia Season 6</p>
-            </a>
-        </div>
- 
-        <div class="col-md-2 anime-grid-list">
-
-            <a href="">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139630-oc4l8OtJ4tRQ.jpg"
-             alt="" class="anime-grid-list-image">
-            </a>
-              <a href="" class="text-decor">
-                <p class="anime-title-list-grid">My Hero Academia Season 6</p>
-            </a>
-        </div>
-
-        
     </div>
 </div>
