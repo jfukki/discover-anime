@@ -142,12 +142,7 @@
                     </div>
 
 
-                    <div class="col-md-2 anime-detail-info-grid">
-
-                        <span class="anime-detail-info-grid-title">Theme: </span> <span class="anime-detail-info-grid-text">{{$data['themes'][0]['name']}}</span>
-
-                    </div>
-
+                   
                                      
                     <div class="col-md-2 anime-detail-info-grid">
 
@@ -158,15 +153,60 @@
 
                    
                    
-                    <div class="col-md-2 anime-detail-info-grid">
-
-                        <span class="anime-detail-info-grid-title">Studios: </span> <span class="anime-detail-info-grid-text">{{$data['studios'][0]['name']}}</span>
-
-                    </div>
- 
+                   
 
     </div>
  </div>
+
+
+
+
+ <div class="conatiner extra-padding-container">
+    <div class="row">
+                        <div class="col-md-12">
+                        <hr class="mt-5">
+                             <h2>Watch {{$data['titles'][0]['title']}} | {{$data['type']}}  </h2>
+                            
+                        </div>
+
+
+                       @if(collect($episodes)->isNotEmpty())
+
+                            @foreach($episodes as $episodes)
+
+                                    <div class="col-md-2 anime-grid-list">
+
+                                        <a href="{{$episodes['url']}}" target="_blank">
+                                        <img src="{{$episodes['images']['jpg']['image_url']}}"
+                                        alt="" class="anime-grid-list-image">
+                                        </a>
+
+                                        <a href="{{$episodes['url']}}" class="text-decor" target="_blank">
+                                            <p class="anime-title-list-grid">{{$episodes['episode']}}: {{$episodes['title']}}</p>
+                                            <br>
+                                        </a>
+                                        
+
+                                    </div>
+
+                            @endforeach
+
+                        @else
+
+                        <h2>Episodes not found</h2>
+
+
+                       @endif
+                       
+
+
+                   
+    </div>
+ </div>
+
+
+
+
 
 
 
@@ -202,32 +242,7 @@
     </div>
  </div>
 
-
- <div class="conatiner extra-padding-container">
-    <div class="row">
-                        <div class="col-md-12">
-                        <hr class="mt-5">
-                             <h2>Staff </h2>
-                            
-                        </div>
-                        @foreach($staff as $staff)
-                        <div class="col-md-2 anime-grid-list">
-
-                            <a href="">
-                            <img src="{{$staff['person']['images']['jpg']['image_url']}}"
-                            alt="" class="anime-grid-list-image">
-                            </a>
-
-                            <a href="" class="text-decor">
-                                <p class="anime-title-list-grid">{{$staff['person']['name']}}</p>
-                            </a>
-
-                        </div>
-                        @endforeach
-
-                         
-    </div>
- </div>
+ 
 
 
 

@@ -1,5 +1,5 @@
 
-<div class="container extra-padding-container">
+<div class="container extra-padding-container d-none d-md-block">
     <div class="row heading-row-title">
         <div class="col-md-10">
             <h2>Upcoming Soon </h2>
@@ -14,13 +14,13 @@
 
 </div>
 
-<div class="container">
+<div class="container d-none d-md-block">
 
-        <div class="row">   
+        <div class="row row-cols-4">   
 
         @foreach($upcomingSeason as $upcomingSeason)
 
-        <div class="col-md-3 anime-grid-list">
+        <div class="col anime-grid-list d-none d-md-block">
 
             <a href="{{ route('animeDetail' , $upcomingSeason['mal_id'])  }}">
             <img src="{{$upcomingSeason['images']['jpg']['large_image_url']}}"
@@ -37,4 +37,8 @@
   
    
     </div>
+
+    
+
+    
 </div>
