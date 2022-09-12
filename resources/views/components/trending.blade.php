@@ -18,6 +18,7 @@
 <div class="row row-cols-5">   
 
     
+<<<<<<< HEAD
 @foreach($data as $d)
     <div class="col anime-grid-list d-none d-md-block">
 
@@ -28,6 +29,23 @@
         <a href="{{ route('animeDetail' , $d['mal_id']) }}" class="text-decor">
             <p class="anime-title-list-grid">{{$d['titles'][0]['title']}}</p>
         </a>
+=======
+    @foreach($data as $d)
+        <div class="col-md-3 anime-grid-list">
+
+            <a href="{{ route('animeDetail' , $d['mal_id'])  }}">
+            <img src="{{$d['images']['jpg']['large_image_url']}}"
+             alt="" class="anime-grid-list-image">
+            </a>
+            <a href="{{ route('animeDetail' , $d['mal_id']) }}" class="text-decor">
+                <p class="anime-title-list-grid">{{$d['titles'][0]['title']}}</p>
+            </a>
+            
+        </div>
+ @endforeach
+      
+ 
+>>>>>>> c7f5ca0848ba4917d10ff20eafd6c0c15d578fa9
         
     </div>
 @endforeach
