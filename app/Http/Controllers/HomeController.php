@@ -212,17 +212,8 @@ class HomeController extends Controller
 
         $curl = curl_init();
 
-<<<<<<< HEAD
         curl_setopt_array($curl, array(
         CURLOPT_URL => 'https://api.jikan.moe/v4/anime/'.$id.'/videos/episodes',
-=======
-
-
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://api.jikan.moe/v4/anime/'.$id.'/streaming',
->>>>>>> c7f5ca0848ba4917d10ff20eafd6c0c15d578fa9
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
@@ -232,7 +223,6 @@ class HomeController extends Controller
         CURLOPT_CUSTOMREQUEST => 'GET',
         ));
 
-<<<<<<< HEAD
         $episodes = [];
         $response = curl_exec($curl);
 
@@ -264,21 +254,6 @@ class HomeController extends Controller
 
         curl_setopt_array($curl, array(
         CURLOPT_URL => 'https://api.jikan.moe/v4/top/anime?filter=bypopularity',
-=======
-        $response = curl_exec($curl);
-
-        curl_close($curl);
-        $streamingsites = json_decode($response, true);
-          
-        $streamingsites =  $streamingsites['data'];
-
-
-
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://api.jikan.moe/v4/anime/'.$id.'/videos/episodes',
->>>>>>> c7f5ca0848ba4917d10ff20eafd6c0c15d578fa9
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
@@ -288,7 +263,6 @@ class HomeController extends Controller
         CURLOPT_CUSTOMREQUEST => 'GET',
         ));
 
-<<<<<<< HEAD
         $search = [];
         $response = curl_exec($curl);
 
@@ -307,16 +281,5 @@ class HomeController extends Controller
     public function browse()
     {
         return view ('browse');
-=======
-        $response = curl_exec($curl);
-
-        curl_close($curl);
-        $episodes = json_decode($response, true);
-          
-        $episodes =  $episodes['data'];
-
-
-        return view('animeDetail')->with('data', $data)->with('characters', $characters)->with('staff', $staff)->with('pictures', $pictures)->with('recommendations', $recommendations)->with('streamingsites', $streamingsites)->with('episodes', $episodes);
->>>>>>> c7f5ca0848ba4917d10ff20eafd6c0c15d578fa9
     }
 }
